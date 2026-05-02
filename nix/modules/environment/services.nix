@@ -4,5 +4,5 @@
     flatpak.enable = true;
   };
 
-}
+};
 
