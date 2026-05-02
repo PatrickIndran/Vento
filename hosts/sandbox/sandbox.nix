@@ -13,10 +13,9 @@
     user = "sandbox"; 
   };
 
-  users.users.testuser = {
+  users.users.sandbox = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
-    initialPassword = "sandbox";
   };
 
 
