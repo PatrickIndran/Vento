@@ -16,6 +16,8 @@
   users.users.sandbox = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
+    password = "sandbox";
+
   };
 
 
