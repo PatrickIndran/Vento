@@ -21,7 +21,6 @@
   ];
 
   boot.initrd.systemd.enable = true; 
-  boot.initrd.verbose = false;
 
   # --- plymouth ---
 
