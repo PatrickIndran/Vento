@@ -8,8 +8,9 @@
     git
     vim
     nano
-  ];
 
-  
+    # --- virt ---
+    distrobox
+  ];
 }
 
