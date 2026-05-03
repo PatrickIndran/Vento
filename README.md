@@ -1,4 +1,4 @@
-# Ventoo
+# Vento
 
 > **Work in progress.** Expect breaking changes.
 
