@@ -14,6 +14,14 @@
 
   environment.etc."xdg/kdeglobals".text = ''
     [KDE]
-    LookAndFeelPackage=org.ventoo.dark.desktop
+    LookAndFeelPackage=org.kde.breezedark.desktop
+
+    [General]
+    ColorScheme=BreezeDark
+  '';
+
+  environment.etc."xdg/plasma-org.kde.plasma.desktop-appletsrc".text = ''
+    [Containments][1][Wallpaper][org.kde.image][General]
+    Image=glaze
   '';
 }
