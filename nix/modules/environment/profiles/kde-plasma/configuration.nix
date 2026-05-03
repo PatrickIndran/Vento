@@ -6,6 +6,7 @@
       name = "ventoo-wallpapers";
       src = ../../../../../src/themes/kde-plasma/ventoo.dark.desktop/wallpapers;
       installPhase = ''
+        mkdir -p $out/share/wallpapers
         cp -r . $out/share/wallpapers/
       '';
     })
@@ -14,7 +15,8 @@
       name = "ventoo-plasma-theme";
       src = ../../../../../src/themes/kde-plasma/ventoo.dark.desktop/look-and-feel;
       installPhase = ''
-        cp -r org.ventoo.dark.desktop $out/share/plasma/look-and-feel/org.ventoo.dark.desktop
+        mkdir -p $out/share/plasma/look-and-feel
+        cp -r org.ventoo.dark.desktop $out/share/plasma/look-and-feel/
       '';
     })
   ];
