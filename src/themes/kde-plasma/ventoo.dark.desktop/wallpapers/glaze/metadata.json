@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Id": "glaze",
+        "Name": "Glaze",
+        "ServiceTypes": ["Plasma/Wallpaper"]
+    }
+}

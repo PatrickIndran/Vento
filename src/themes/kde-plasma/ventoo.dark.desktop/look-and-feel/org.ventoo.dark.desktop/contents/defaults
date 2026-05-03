@@ -1,0 +1,10 @@
+[General]
+ColorScheme=BreezeDark
+widgetStyle=Breeze
+
+[Desktop]
+layoutJs=default
+
+[Wallpaper]
+defaultWallpaperTheme=glaze
+defaultFileSuffix=.png
