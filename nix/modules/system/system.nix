@@ -4,5 +4,7 @@
   imports = [ 
     ./bootloader.nix
     ./nixenv.nix
+    ./env.nix
+
   ];
 }
