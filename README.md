@@ -1,23 +1,18 @@
-Ventoo
+# Ventoo
 
-    Work in progress. Expect breaking changes.
+> **Work in progress.** Expect breaking changes.
 
-An immutable, flake-native desktop experience built on NixOS. Ventoo provides a rock-solid core designed for reliability and a user-friendly workflow.
-Features
+An immutable, flake-native desktop experience built on **NixOS**. Ventoo provides a rock-solid core designed for reliability and a user-friendly workflow.
 
-    Immutable Core: Built on NixOS for a read-only system root that stays consistent.
+## Features
 
-    KDE Plasma: A familiar, powerful, and user-friendly desktop environment out of the box.
+*   **Immutable Core**: Built on NixOS for a read-only system root that stays consistent.
+*   **KDE Plasma**: A familiar, powerful, and user-friendly desktop environment out of the box.
+*   **Developer Ready**: Native support for `distrobox` and `podman` for seamless containerized development.
+*   **Atomic Reliability**: Every change is tracked; if an update fails, just roll back to the previous generation.
 
-    Developer Ready: Native support for distrobox and podman for seamless containerized development.
+## Planned
 
-    Atomic Reliability: Every change is tracked; if an update fails, just roll back to the previous generation.
-
-Planned
-
-    vento CLI: A dedicated tool for simplified patch and system management.
-
-    Patch System: Easily layer additional Nix configurations (like GPU drivers or hardware fixes) on top of the base system.
-
-    Verified Boot: Security integration via Lanzaboote for trusted system startup.
-
+*   **vento CLI**: A dedicated tool for simplified patch and system management.
+*   **Patch System**: Easily layer additional Nix configurations (like GPU drivers or hardware fixes) on top of the base system.
+*   **Verified Boot**: Security integration via **Lanzaboote** for trusted system startup.
