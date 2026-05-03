@@ -2,7 +2,8 @@
 
  {
   imports = [ 
-    ./packages.nix  
+    ./packages.nix 
+    ./configuration.nix
   ];
 
   services = {

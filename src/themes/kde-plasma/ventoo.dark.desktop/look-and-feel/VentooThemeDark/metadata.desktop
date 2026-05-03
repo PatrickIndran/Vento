@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Ventoo Dark
+Comment=Official Dark Theme for Ventoo Linux
+Type=Service
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-PluginInfo-Author=Ventoo Team
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-Name=org.ventoo.dark.desktop
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-License=GPL

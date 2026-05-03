@@ -1,0 +1,12 @@
+[Desktop]
+Wallpaper=file:///etc/ventoo/assets/wallpapers/glaze_1.heic
+
+[Global]
+LookAndFeelPackage=org.ventoo.dark.desktop
+
+[kdeglobals][KDE]
+widgetStyle=Breeze
+colorScheme=BreezeDark
+
+[kdeglobals][General]
+ColorScheme=BreezeDark
