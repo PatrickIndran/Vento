@@ -5,34 +5,43 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }: 
+  outputs = { self, nixpkgs, ... }@inputs: 
   let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     
-    nixosConfigurations = {
+   
+    nixosModules = {
       
-      main = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
+      # --- Main ---
+
+      main = {
+        imports = [
           ./nix/modules/system/system.nix
           ./nix/modules/environment/environment.nix
           ./nix/modules/environment/profiles/kde-plasma/default.nix
         ];
       };
+      
+      # --- Sandbox ---    
 
-      # --- Test VM --- 
+      sandbox = {
+        imports = [
+          ./hosts/sandbox/sandbox.nix        
+          ];
+      };
+    };
 
-      test-vm = nixpkgs.lib.nixosSystem {
+    nixosConfigurations = {
+      
+      main = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [
-          ./nix/modules/system/system.nix
-          ./nix/modules/environment/environment.nix
-          ./hosts/sandbox/sandbox.nix
-          ./nix/modules/environment/profiles/kde-plasma/default.nix
-        
-        ];
+        modules = [ self.nixosModules.main ];
+      };
+
+      sandbox = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ self.nixosModules.sandbox ];
       };
       
     };
