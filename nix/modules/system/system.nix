@@ -3,5 +3,6 @@
 {
   imports = [ 
     ./bootloader.nix
+    ./nixenv.nix
   ];
 }
