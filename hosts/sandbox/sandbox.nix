@@ -41,4 +41,8 @@
     kdePackages.gwenview       
   ];
 
+  services.openssh = {
+    enable = true;
+  };
+
 }
