@@ -29,6 +29,7 @@
           ./nix/modules/system/system.nix
           ./nix/modules/environment/environment.nix
           ./hosts/sandbox/sandbox.nix
+          ./nix/modules/environment/profiles/kde-plasma/default.nix
         
         ];
       };
