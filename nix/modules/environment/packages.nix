@@ -8,7 +8,6 @@
     git
     vim
     nano
-    firefox
 
     # --- virt ---
     distrobox
