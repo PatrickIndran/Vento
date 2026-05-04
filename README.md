@@ -8,7 +8,7 @@ An immutable, flake-native desktop experience built on **NixOS**. Ventoo provide
 
 *   **Immutable Core**: Built on NixOS for a read-only system root that stays consistent.
 *   **KDE Plasma**: A familiar, powerful, and user-friendly desktop environment out of the box.
-*   **Developer Ready**: Native support for `distrobox` and `podman` for seamless containerized development.
+*   **Containerization Ready**: Native support for `distrobox` and `podman`.
 *   **Atomic Reliability**: Every change is tracked; if an update fails, just roll back to the previous generation.
 
 ## Planned
