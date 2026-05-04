@@ -14,5 +14,4 @@ An immutable, flake-native desktop experience built on **NixOS**. Ventoo provide
 ## Planned
 
 *   **vento CLI**: A dedicated tool for simplified patch and system management.
-*   **Patch System**: Easily layer additional Nix configurations (like GPU drivers or hardware fixes) on top of the base system.
-*   **Verified Boot**: Security integration via **Lanzaboote** for trusted system startup.
+*   **Custom Installer**: A more easy way to install it then adding it as a Flake.
