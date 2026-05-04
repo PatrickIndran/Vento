@@ -8,6 +8,7 @@
     git
     vim
     nano
+    jq
 
     # --- virt ---
     distrobox
