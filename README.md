@@ -2,7 +2,7 @@
 
 > **Work in progress.** Expect breaking changes.
 
-An immutable, flake-native desktop experience built on **NixOS**. Ventoo provides a rock-solid core designed for reliability and a user-friendly workflow.
+An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-solid core designed for reliability and newcomers.
 
 ## Features
 
