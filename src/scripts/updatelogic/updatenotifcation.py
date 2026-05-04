@@ -5,7 +5,7 @@ import notify2
 from gi.repository import GLib
 
 
-def get_vento_status():
+def get_hash_status():
     try:
         local = subprocess.check_output(['nixos-version', '--configuration-revision']).decode().strip()
         
@@ -19,7 +19,7 @@ def get_vento_status():
         print(f"error checking status: {e}")
         return None, None, None
 
-
+# --- Notfications ---
 
 def on_click(notification, action_key, data=None):
     if action_key == "install_now":
@@ -50,10 +50,12 @@ def trigger_notification(message):
     loop.run()
 
 
-
-local_sha, remote_sha, commit_msg = get_vento_status()
-
 loop = GLib.MainLoop()
+
+
+local_sha, remote_sha, commit_msg = get_hash_status()
+
+# --- Compair Both Hashs ---
 
 if local_sha and remote_sha and local_sha != remote_sha:
     print("new hash from remote")
