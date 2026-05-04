@@ -15,3 +15,4 @@ An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-sol
 
 *   **vento CLI**: A dedicated tool for simplified patch and system management.
 *   **Custom Installer**: A more easy way to install it then adding it as a Flake.
+*   **Update Notfication**: Simple way to update the system, without any terminal commands.
