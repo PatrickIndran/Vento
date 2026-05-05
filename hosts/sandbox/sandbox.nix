@@ -26,8 +26,8 @@
     virtualisation.memorySize = 4096;
     virtualisation.cores = 4;
     virtualisation.qemu.options = [ 
-      "-device virtio-vga-gl" 
-      "-display gtk,gl=on" 
+    #  "-device virtio-vga-gl" 
+    #  "-display gtk,gl=on" 
     ];
   };
 
