@@ -5,7 +5,7 @@ import notify2
 from gi.repository import GLib
 
 
-def get_hash_status():
+def get_vento_status():
     try:
         local = subprocess.check_output(['nixos-version', '--configuration-revision']).decode().strip()
         
@@ -15,34 +15,35 @@ def get_hash_status():
         with urllib.request.urlopen(req) as r:
             data = json.load(r)
             return local, data['sha'], data['commit']['message']
-    except Exception as e:
-        print(f"error checking status: {e}")
-        return None, None, None
+    except Exception:
+      return None, None, None
 
-# --- Notfications ---
+# --- Notifications ---
 
 def on_click(notification, action_key, data=None):
     if action_key == "install_now":
         print("starting update process...")
         try:
             subprocess.run(["pkexec", "nix", "flake", "update", "--flake", "/etc/nixos"], check=True)
-            
-            
-            success_n = notify2.Notification("Update Complete", "The system has been updated.")
+            success_n = notify2.Notification(
+              "Update Complete",
+              "The system has been updated."
+            )
             success_n.show()
         except subprocess.CalledProcessError:
-            error_n = notify2.Notification("Update Failed", "Could not update the flake.")
+            error_n = notify2.Notification(
+              "Update Failed",
+              "Could not update the system."
+            )
             error_n.show()
     
     loop.quit()
 
-
-
 def trigger_notification(message):
     notify2.init("Update Manager")
-    n = notify2.Notification(
-        "Update Available", 
-        f"New commit: {message}\nDo you want to install it?", 
+    n = notify2.notification(
+        "update available", 
+        "do you want to install it?", 
         "system-software-update"
     )
     n.add_action("install_now", "Install Now", on_click)
@@ -52,10 +53,9 @@ def trigger_notification(message):
 
 loop = GLib.MainLoop()
 
+local_sha, remote_sha, commit_msg = get_vento_status()
 
-local_sha, remote_sha, commit_msg = get_hash_status()
-
-# --- Compair Both Hashs ---
+# --- Compare Both Hashes ---
 
 if local_sha and remote_sha and local_sha != remote_sha:
     print("new hash from remote")
