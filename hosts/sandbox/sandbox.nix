@@ -1,5 +1,5 @@
 # ./hosts/proto/sandbox.nix
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
   networking.hostName = "sandbox";
@@ -17,31 +17,24 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     password = "sandbox";
+
   };
-  
-  # nix run .#nixosConfigurations.sandbox.config.system.build.vm
+
+
   virtualisation.vmVariant = {
     virtualisation.diskSize = 8192;
     virtualisation.memorySize = 4096;
     virtualisation.cores = 4;
-  };
-  
-  # nix run .#nixosConfigurations.sandbox.pkgs.specialisation.gpu.configuration.system.build.vm
-  specialisation.gpu.configuration = {
-    hardware.graphics.enable = true;
-    
-    virtualisation.vmVariant = {
-      virtualisation.qemu.options = [ 
-        "-device virtio-vga-gl" 
-        "-display gtk,gl=on" 
-      ];
-    };
+    virtualisation.qemu.options = [ 
+      "-device virtio-vga-gl" 
+      "-display gtk,gl=on" 
+    ];
   };
 
   environment.systemPackages = with pkgs; [
     kdePackages.discover      
     kdePackages.dolphin       
-    kdePackages.konsole       
+    kdePackages.konsole        
     kdePackages.kate          
     kdePackages.spectacle      
     kdePackages.ark           
@@ -51,4 +44,5 @@
   services.openssh = {
     enable = true;
   };
+
 }
