@@ -22,6 +22,9 @@ def get_vento_status():
 
 
 def rebuild():
+
+    print:("starting rebuild and flake update")
+
     process = subprocess.Popen(
         ["pkexec", "sh", "-c",
          "nix flake update --flake /etc/nixos && "
