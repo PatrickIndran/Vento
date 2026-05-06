@@ -19,6 +19,17 @@ def rev_request():
     except Exception:
         return None, None, None
 
+def notfication():
+    Notify.init("Vento")
+
+    n = Notify.Notification.new(
+      "Update Available!", 
+      "There is a new update available.",
+    )
+
+    n.add_action("install", "Install Now", install_approved, None)
+
+    n.show()
 
 def rev_compare():
     local_rev, remote_rev, message = rev_request()
@@ -36,17 +47,7 @@ def rev_compare():
 rev_compare()
 
 
-def notfication():
-    Notify.init("Vento")
 
-    n = Notify.Notification.new(
-      "Update Available!", 
-      "There is a new update available.",
-    )
-
-    n.add_action("install", "Install Now", install_approved, None)
-
-    n.show()
 
 def install_approved(notification, action, data):
     print("user pressed Install Now")
