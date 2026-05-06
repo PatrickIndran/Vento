@@ -8,7 +8,7 @@ softwareupdate = pkgs.writers.writePython3Bin "softwareupdate"
   {
     libraries = with pkgs.python3Packages; [
       requests 
-      pygobject3 # Provides the 'gi' module
+      pygobject3 
     ]; 
   } 
   (builtins.readFile ./vento-softwareupdate/softwareupdate.py);
