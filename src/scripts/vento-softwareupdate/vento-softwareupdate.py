@@ -36,6 +36,7 @@ def rebuild():
         print(line, end='', flush=True)
 
     process.wait()
+    return process.returncode == 0
 
 
 # --- Notifications ---
@@ -43,15 +44,13 @@ def rebuild():
 def on_click(notification, action_key, data=None):
     if action_key == "install_now":
         print("starting update process...")
-        try:
-            rebuild()
-
+        if rebuild():
             success_n = notify2.Notification(
                 "Update Complete",
                 "The system has been updated."
             )
             success_n.show()
-        except subprocess.CalledProcessError:
+        else:
             error_n = notify2.Notification(
                 "Update Failed",
                 "Could not update the system."
