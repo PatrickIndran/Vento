@@ -8,7 +8,7 @@ in
   environment.systemPackages = with pkgs; [ 
 
     # --- Vento Scripts ---
-    #vento.softwareupdate
+    vento.softwareupdate
 
     # --- essentials ---
     jq
