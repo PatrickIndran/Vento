@@ -24,5 +24,6 @@ in
 
     # --- virt ---
     distrobox
+
   ];
 }
