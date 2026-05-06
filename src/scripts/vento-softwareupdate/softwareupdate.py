@@ -29,6 +29,7 @@ def rev_compare():
         else:
             print(f"local-rev:{local_rev}")
             print(f"remote-rev:{remote_rev}")
+            notfication()
     else:
         print("error: could not find any revision")
 
