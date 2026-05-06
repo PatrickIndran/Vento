@@ -21,7 +21,7 @@ def rev_request():
 
 rev_compare()
 
-def rev_compair():
+def rev_compare():
     local_rev, remote_rev, message = rev_request()
 
     if local_rev and remote_rev:
