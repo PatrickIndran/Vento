@@ -25,7 +25,7 @@ def rebuild():
         ["pkexec", "sh", "-c", "nix flake update --flake /etc/nixos && nixos-rebuild switch --flake /etc/nixos"],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT, 
-        bufsize=1   
+        bufsize=1, 
         text=True,                      
 
     )
