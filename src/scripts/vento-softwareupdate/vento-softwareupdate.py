@@ -42,7 +42,7 @@ def on_click(notification, action_key, data=None):
     if action_key == "install_now":
         print("starting update process...")
         try:
-            rebuild():
+            rebuild()
 
             success_n = notify2.Notification(
                 "Update Complete",
