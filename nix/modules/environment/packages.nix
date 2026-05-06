@@ -11,11 +11,16 @@ in
     #vento.softwareupdate
 
     # --- essentials ---
+    jq
+    curl
+    wget
+
+    # --- Quility Of Life ---
+    fastfetch
     htop
     git
     vim
     nano
-    jq
 
     # --- virt ---
     distrobox
