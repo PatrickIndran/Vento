@@ -66,6 +66,8 @@ local_sha, remote_sha, commit_msg = get_vento_status()
 
 if local_sha and remote_sha and local_sha != remote_sha:
     print("new hash from remote")
+    print(f"local:  {local_sha[:7]}")
+    print(f"remote: {G}{remote_sha[:7]}{W}")
     trigger_notification(commit_msg)
 else:
     print("hash is identical.")
