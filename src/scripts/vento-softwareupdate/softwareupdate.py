@@ -1,9 +1,8 @@
 import requests
 import subprocess
-
-import gi 
+import gi
 gi.require_version('Notify', '0.7')
-from gi.repository import Notify
+from gi.repository import Notify, GLib
 
 def rev_request():
     try:
