@@ -20,6 +20,21 @@ def get_vento_status():
     except Exception:
         return None, None, None
 
+def rebuild():
+    process = subprocess.Popen(
+        ["pkexec", "sh", "-c", "nix flake update --flake /etc/nixos && nixos-rebuild switch --flake /etc/nixos"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT, 
+        bufsize=1   
+        text=True,                      
+
+    )
+
+    for line in process.stdout:
+        print(line, end='', flush=True)
+
+    process.wait()
+
 
 # --- Notifications ---
 
@@ -27,10 +42,8 @@ def on_click(notification, action_key, data=None):
     if action_key == "install_now":
         print("starting update process...")
         try:
-            subprocess.run(
-                ["pkexec", "nix", "flake", "update", "--flake", "/etc/nixos"],
-                check=True
-            )
+            rebuild():
+
             success_n = notify2.Notification(
                 "Update Complete",
                 "The system has been updated."
@@ -49,9 +62,9 @@ def on_click(notification, action_key, data=None):
 def trigger_notification(message):
     notify2.init("Update Manager")
     n = notify2.Notification(
-        "update available",
-        "do you want to install it?",
-        "system-software-update"
+        "Update available",
+        "Do you want to install it?",
+        "System software update"
     )
     n.add_action("install_now", "Install Now", on_click)
     n.show()
