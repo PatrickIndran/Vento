@@ -8,7 +8,7 @@ in
   environment.systemPackages = with pkgs; [ 
 
     # --- Vento Scripts ---
-    vento.updatenotification
+    vento.softwareupdate
 
     # --- essentials ---
     htop
