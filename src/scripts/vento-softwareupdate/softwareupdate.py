@@ -19,7 +19,6 @@ def rev_request():
     except Exception:
         return None, None, None
 
-rev_compare()
 
 def rev_compare():
     local_rev, remote_rev, message = rev_request()
@@ -32,6 +31,9 @@ def rev_compare():
             print(f"remote-rev:{remote_rev}")
     else:
         print("error: could not find any revision")
+
+rev_compare()
+
 
 def notfication():
     Notify.init("Vento")
