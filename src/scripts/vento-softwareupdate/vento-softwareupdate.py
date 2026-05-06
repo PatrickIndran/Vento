@@ -20,14 +20,16 @@ def get_vento_status():
     except Exception:
         return None, None, None
 
+
 def rebuild():
     process = subprocess.Popen(
-        ["pkexec", "sh", "-c", "nix flake update --flake /etc/nixos && nixos-rebuild switch --flake /etc/nixos"],
+        ["pkexec", "sh", "-c",
+         "nix flake update --flake /etc/nixos && "
+         "nixos-rebuild switch --flake /etc/nixos"],
         stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT, 
-        bufsize=1, 
-        text=True,                      
-
+        stderr=subprocess.STDOUT,
+        bufsize=1,
+        text=True
     )
 
     for line in process.stdout:
@@ -84,3 +86,4 @@ if local_sha and remote_sha and local_sha != remote_sha:
     trigger_notification(commit_msg)
 else:
     print("hash is identical.")
+
