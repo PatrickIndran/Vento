@@ -20,8 +20,5 @@
     ColorScheme=BreezeDark
   '';
 
-  environment.etc."xdg/plasma-org.kde.plasma.desktop-appletsrc".text = ''
-    [Containments][1][Wallpaper][org.kde.image][General]
-    Image=glaze
-  '';
+
 }
