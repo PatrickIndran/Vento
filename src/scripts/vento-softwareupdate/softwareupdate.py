@@ -50,7 +50,6 @@ def install_approved(notification, action, data):
     print("user pressed Install Now")
     loop.quit()
 
-
 loop = GLib.MainLoop()
 try:
     loop.run()
