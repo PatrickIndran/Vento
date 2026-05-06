@@ -86,4 +86,3 @@ if local_sha and remote_sha and local_sha != remote_sha:
     trigger_notification(commit_msg)
 else:
     print("hash is identical.")
-
