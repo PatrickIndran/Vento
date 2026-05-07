@@ -9,6 +9,7 @@
   let
     system = "x86_64-linux";
 
+    pkgs = nixpkgs.legacyPackages.${system};
     vento-packages = import ./src/packages.nix { inherit pkgs; };
   in {
     
