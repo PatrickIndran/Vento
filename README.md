@@ -16,3 +16,31 @@ An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-sol
 *   **vento CLI**: A dedicated tool for simplified patch and system management.
 *   **Custom Installer**: A more easy way to install it then adding it as a Flake.
 *   **Update Notfication**: Simple way to update the system, without any terminal commands.
+
+# Installation
+
+1. To install this config, add `vento.url = "github:patrickindran/vento";` to your inputs and `vento.nixosModules.main` to your modules in your flake.
+2. Run `nix flake update` and then `sudo nixos-rebuild switch --flake .#vento`.
+
+```
+{
+  description = "System Flake importing Vento";
+
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    vento.url = "github:patrickindran/vento";
+  };
+
+  outputs = { self, nixpkgs, vento, ... }: {
+    nixosConfigurations = {
+      vento = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          vento.nixosModules.main
+        ];
+      };
+    };
+  };
+}
+}
