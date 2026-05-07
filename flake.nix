@@ -8,6 +8,8 @@
   outputs = { self, nixpkgs, ... }@inputs: 
   let
     system = "x86_64-linux";
+
+    vento-packages = import ./src/packages.nix { inherit pkgs; };
   in {
     
    
