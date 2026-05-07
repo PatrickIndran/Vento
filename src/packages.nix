@@ -14,7 +14,7 @@ softwareupdate = pkgs.writers.writePython3Bin "softwareupdate"
     ];
     doCheck = false;
   } 
-  (builtins.readFile ./vento-softwareupdate/softwareupdate.py);
+  (builtins.readFile ./scripts/vento-softwareupdate/softwareupdate.py);
 
 }  
   
