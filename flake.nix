@@ -55,11 +55,13 @@
       main = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ self.nixosModules.main ];
+        specialArgs = { inherit vento-packages; };
       };
 
       sandbox = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ self.nixosModules.sandbox ];
+        specialArgs = { inherit vento-packages; };
       };
       
     };
