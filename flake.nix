@@ -50,18 +50,18 @@
       };
     };
 
-    nixosConfigurations = {
+    nixosconfigurations = {
       
-      main = nixpkgs.lib.nixosSystem {
+      main = nixpkgs.lib.nixossystem {
         inherit system;
-        modules = [ self.nixosModules.main ];
-        specialArgs = { inherit vento-packages; };
+        modules = [ self.nixosmodules.main ];
+        specialargs = { inherit vento-packages; };
       };
 
-      sandbox = nixpkgs.lib.nixosSystem {
+      sandbox = nixpkgs.lib.nixossystem {
         inherit system;
-        modules = [ self.nixosModules.sandbox ];
-        specialArgs = { inherit vento-packages; };
+        modules = [ self.nixosmodules.sandbox ];
+        specialargs = { inherit vento-packages; };
       };
       
     };
