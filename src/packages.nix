@@ -19,7 +19,7 @@ softwareupdate = pkgs.writers.writePython3Bin "softwareupdate"
   vento-theme = pkgs.stdenv.mkDerivation {
     name = "vento-dark-theme";
     
-    src = ./themes/kde-plasma/org.vento.dark/; 
+    src = ./themes/kde-plasma/org.vento.dark;
 
     installPhase = ''
       mkdir -p $out/share/plasma/look-and-feel/org.vento.dark
