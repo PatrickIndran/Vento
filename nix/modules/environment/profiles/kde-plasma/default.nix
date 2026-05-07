@@ -8,10 +8,7 @@
 
   services = {
     desktopManager.plasma6.enable = true;
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
+    experimental.use_plasma_login_manager = true;
 
     xserver.enable = true;
   };
