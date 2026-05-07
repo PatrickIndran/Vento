@@ -1,5 +1,4 @@
-![Alt text](src/branding/logo_designs/icons/vento_wordmart/vento_wordmart.svg)
-
+<img width="512" height="120" alt="vento_wordmart" src="https://github.com/user-attachments/assets/2b92678d-9ed8-4408-a8f4-11499b2540f5" />![Uploading vento_wordmart.svg…]()
 
 > **Work in progress.** Expect breaking changes.
 
