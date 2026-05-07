@@ -8,7 +8,7 @@
 
   services = {
     desktopManager.plasma6.enable = true;
-    services.displayManager.plasma-login-manager.enable = true;
+    displayManager.plasma-login-manager.enable = true;
 
     xserver.enable = true;
   };
