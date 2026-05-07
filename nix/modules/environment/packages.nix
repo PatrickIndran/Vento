@@ -6,8 +6,8 @@
   environment.systemPackages = with pkgs; [ 
 
     # --- Vento Packages ---
-    vento-packages.softwareupdate
-    vento-packages.vento-theme
+    #vento-packages.softwareupdate
+    #vento-packages.vento-theme
 
     # --- essentials ---
     jq
