@@ -1,3 +1,6 @@
+![Alt text](src/branding/logo_designs/icons/vento_wordmart/vento_wordmart.svg)
+
+
 > **Work in progress.** Expect breaking changes.
 
 An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-solid core designed for reliability and newcomers.
