@@ -10,7 +10,7 @@ An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-sol
 *   **KDE Plasma**: A familiar, powerful, and user-friendly desktop environment out of the box.
 *   **Containerization Ready**: Native support for `distrobox` and `podman`.
 *   **Atomic Reliability**: Every change is tracked; if an update fails, just roll back to the previous generation.
-    **Flatpak And DistroBox**: Allows users to install apps with ease.
+*    **Flatpak And DistroBox**: Allows users to install apps with ease.
 
 ## Planned
 
