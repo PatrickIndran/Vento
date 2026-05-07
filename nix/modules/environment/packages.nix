@@ -26,4 +26,9 @@ in
     distrobox
 
   ];
+
+  programs = {
+    kdeconnect.enable = true;
+  };
+
 }
