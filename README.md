@@ -20,7 +20,7 @@ An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-sol
 # Installation
 
 1. To install this config, add `vento.url = "github:patrickindran/vento";` to your inputs and `vento.nixosModules.main` to your modules in your flake.
-2. Run `nix flake update` and then `sudo nixos-rebuild switch --flake .#vento`.
+2. Run `sudo nix flake update` and then `sudo nixos-rebuild switch --flake .#vento`.
 
 ```
 {
