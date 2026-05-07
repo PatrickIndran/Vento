@@ -24,7 +24,7 @@ An immutable, flake based desktop built on **NixOS**. Ventoo provides a rock-sol
 
 ```
 {
-  description = "System Flake importing Vento";
+  description = "Vento";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
