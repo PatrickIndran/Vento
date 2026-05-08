@@ -1,9 +1,13 @@
-{ config, pkgs, vento-packages, ... }:
-
+{
+  config,
+  pkgs,
+  vento-packages,
+  ...
+}:
 
 {
   # --- SystemPackages ---
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
 
     # --- Vento Packages ---
     #vento-packages.softwareupdate

@@ -1,11 +1,11 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   # --- Services ---
 
   services = {
     flatpak.enable = true;
   };
-
 
   # --- Systemd ---
 
@@ -17,17 +17,13 @@
     '';
   };
 
-
   # --- Virtualisation ---
-  
-  virtualisation = { 
+
+  virtualisation = {
     podman = {
       enable = true;
       dockerCompat = true;
-    }; 
+    };
   };
 
-
-
 }
-

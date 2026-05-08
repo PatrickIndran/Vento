@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ 
+  imports = [
     ./bootloader.nix
     ./env.nix
 

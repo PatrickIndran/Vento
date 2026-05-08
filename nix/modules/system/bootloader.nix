@@ -6,7 +6,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # --- Boot --- 
+  # --- Boot ---
 
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;
@@ -20,16 +20,14 @@
     "udev.log_priority=3"
   ];
 
-  boot.initrd.systemd.enable = true; 
+  boot.initrd.systemd.enable = true;
 
   # --- plymouth ---
 
   boot.plymouth = {
     enable = true;
     theme = "spinner";
-    logo = ./../../../src/branding/logo_designs/icons/vento_wordmart/512x512.png; 
+    logo = ./../../../src/branding/logo_designs/icons/vento_wordmart/512x512.png;
   };
-
-
 
 }

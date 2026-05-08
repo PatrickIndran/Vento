@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   # --- fastfetch ---
   environment.etc."xdg/fastfetch/config.jsonc".text = ''
@@ -30,6 +31,5 @@
       ]
     }
   '';
-
 
 }

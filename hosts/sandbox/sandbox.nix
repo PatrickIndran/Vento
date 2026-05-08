@@ -10,35 +10,37 @@
 
   services.displayManager.autoLogin = {
     enable = true;
-    user = "sandbox"; 
+    user = "sandbox";
   };
 
   users.users.sandbox = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     password = "sandbox";
 
   };
-
 
   virtualisation.vmVariant = {
     virtualisation.diskSize = 8192;
     virtualisation.memorySize = 4096;
     virtualisation.cores = 4;
-    virtualisation.qemu.options = [ 
-      "-device virtio-vga-gl" 
-      "-display gtk,gl=on" 
+    virtualisation.qemu.options = [
+      "-device virtio-vga-gl"
+      "-display gtk,gl=on"
     ];
   };
 
   environment.systemPackages = with pkgs; [
-    kdePackages.discover      
-    kdePackages.dolphin       
-    kdePackages.konsole        
-    kdePackages.kate          
-    kdePackages.spectacle      
-    kdePackages.ark           
-    kdePackages.gwenview       
+    kdePackages.discover
+    kdePackages.dolphin
+    kdePackages.konsole
+    kdePackages.kate
+    kdePackages.spectacle
+    kdePackages.ark
+    kdePackages.gwenview
   ];
 
   services.openssh = {
