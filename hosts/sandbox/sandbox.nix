@@ -41,6 +41,7 @@
     kdePackages.spectacle
     kdePackages.ark
     kdePackages.gwenview
+    firefox
   ];
 
   services.openssh = {
