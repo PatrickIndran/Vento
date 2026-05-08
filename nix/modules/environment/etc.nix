@@ -5,8 +5,8 @@
     {
       "$schema": "https://github.com",
       "logo": {
-        "source": "../../../src/branding/logo_designs/icons/vento_logomart/vento_ascii.txt", 
-        "type": "auto",                
+       "source": "${../../../src/branding/logo_designs/icons/vento_logomart/vento_ascii.txt}",
+        "type": "auto",
         "padding": {
           "top": 1,
           "left": 2
@@ -33,4 +33,3 @@
 
 
 }
-
