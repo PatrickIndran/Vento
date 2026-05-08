@@ -1,7 +1,0 @@
-[Desktop]
-LookAndFeel=org.kde.breezedark.desktop
-
-[Appearance]
-ColorScheme=BreezeDark
-IconTheme=breeze-dark
-CursorTheme=breeze_cursors
