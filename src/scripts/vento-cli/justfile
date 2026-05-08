@@ -1,0 +1,6 @@
+update:
+    sudo nix flake update /etc/nixos/
+    sudo nixos-rebuild switch --flake /etc/nixos#vento
+doctor:
+    nix config check
+
