@@ -27,7 +27,7 @@
   boot.plymouth = {
     enable = true;
     theme = "spinner";
-    logo = ./../../../src/branding/icons/vento_wordmart/512x512.png;
+    logo = ./../../../src/branding/icons/vento_wordmart/128x128.png;
     
   };
 
