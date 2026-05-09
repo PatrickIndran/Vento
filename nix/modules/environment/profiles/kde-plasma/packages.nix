@@ -14,5 +14,6 @@
     kdePackages.elisa
     kdePackages.partitionmanager
     kdePackages.plasma-systemmonitor
+    kdePackages.plasma-welcome
   ];
 }
