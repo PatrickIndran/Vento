@@ -1,4 +1,4 @@
-![Alt text](src/branding/logo_designs/icons/vento_wordmart/vento_wordmart.svg)
+![Alt text](src/branding/icons/vento_wordmart/vento_wordmart.svg)
 
 > **Work in progress.** Expect breaking changes.
 
