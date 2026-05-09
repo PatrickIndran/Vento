@@ -15,7 +15,7 @@ stdenv.mkDerivation {
     mkdir -p $out/share/plasma/look-and-feel
     mkdir -p $out/share/plasma/wallpapers
 
-    cp -r lnf $out/share/plasma/look-and-feel/
+    cp -r lnf/* $out/share/plasma/look-and-feel/
 
     cp -r wallpapers $out/share/wallpapers/
   '';
