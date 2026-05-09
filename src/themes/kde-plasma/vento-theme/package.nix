@@ -17,7 +17,7 @@ stdenv.mkDerivation {
 
     cp -r lnf $out/share/plasma/look-and-feel/
 
-    cp -r wallpapers $out/share/plasma/wallpapers/
+    cp -r wallpapers $out/share/wallpapers/
   '';
 }
 
