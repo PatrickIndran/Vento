@@ -11,7 +11,7 @@
 
     # --- Vento Packages ---
     #vento-packages.softwareupdate
-    #vento-packages.vento-theme
+    vento-packages.theme
 
     # --- essentials ---
     jq

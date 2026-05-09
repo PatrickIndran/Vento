@@ -1,0 +1,16 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "patrickindran@proton.me",
+                "Name": "PatrickIndran"
+            }
+        ],
+        "Id": "org.vento.poppy",
+        "Name": "Poppy",
+        "Description": "Official Poppy wallpaper package.",
+        "License": "GPLv3+"
+    }
+}
+
