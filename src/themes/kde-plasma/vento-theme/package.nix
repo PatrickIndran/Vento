@@ -5,8 +5,8 @@ stdenv.mkDerivation {
   version = "1.0";
   
   srcs = [ 
-    ./lnf/
-    ./wallpapers/
+    ./lnf
+    ./wallpapers
   ];
 
   sourceRoot = ".";
