@@ -4,10 +4,8 @@
 
   environment.etc."xdg/kdeglobals".text = ''
     [KDE]
-    LookAndFeelPackage=org.kde.breezedark.desktop
+    LookAndFeelPackage=org.vento.dark.desktop
 
-    [General]
-    ColorScheme=BreezeDark
   '';
 
 }
