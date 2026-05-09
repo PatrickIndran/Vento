@@ -15,5 +15,8 @@
     kdePackages.partitionmanager
     kdePackages.plasma-systemmonitor
     kdePackages.plasma-welcome
+
+    kdePackages.plasma-vault
+    cryfs
   ];
 }
