@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Vento Offical"
+            }
+        ],
+        "Description": "Offical Dark Mode Theme For Vento",
+        "Id": "org.vento.dark.desktop",
+        "License": "GPLv3+",
+        "Name": "Vento Dark",
+        "Website": ""
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;",
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-MainScript": "default"
+}
+
